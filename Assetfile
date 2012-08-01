@@ -1,0 +1,10 @@
+require 'coffee-script'
+require 'rake-pipeline-web-filters'
+
+output 'public'
+
+input  'lib' do
+  match "**/*.js" do
+    concat "utils.js"
+  end
+end
