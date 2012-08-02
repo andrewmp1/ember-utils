@@ -1,5 +1,9 @@
 Ember.JsonableMixin = Ember.Mixin.create({
     getJson: function () {
+        return this.getProperties(this.propertyNames());
+    },
+
+    propertyNames: function () {
         var key, ret, v;
         v = void 0;
         ret = [];
@@ -15,6 +19,6 @@ Ember.JsonableMixin = Ember.Mixin.create({
                 ret.push(key);
             }
         }
-        return this.getProperties(ret);
+        return ret
     }
 });
