@@ -2,6 +2,7 @@
 // Override the sync function to change the manner in which models are syncd to the server. 
 // You will be passed the type of request, and the model in question. 
 // By default, makes a RESTful Ajax requestto the model's `url()`.
+// This is incomplete.  If you'd like to finish this please feel free.
 Ember.SyncableMixin = Ember.Mixin.create({
     id: null,
     urlRoot: null,
