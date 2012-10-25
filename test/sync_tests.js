@@ -1,12 +1,12 @@
 var App = window.App;
 App = (App) ? App : Ember.Application.create();
 
-App.Book = Ember.Object.extend(Ember.Sync, {
+App.Book = Ember.Object.extend(Ember.SyncMixin, {
   id: null,
   attr1: null,
   attr2: null
 });
-App.Book.create().addSyncClassMethods();
+Ember.SyncClassMixin.apply(App.Book);
 
 test('Mixin adds instance methods', function (){
   var book = App.Book.create();
