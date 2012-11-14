@@ -218,7 +218,7 @@ Ember.SyncClassMixin = Ember.Mixin.create({
 
   _loadMany: function(type, value, records) {
     value.forEach(function(item) {
-        records.push(type.create(item));
+        records.pushObject(type.create(item));
     });
   },
 
